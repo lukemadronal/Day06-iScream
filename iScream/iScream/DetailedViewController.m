@@ -10,7 +10,6 @@
 
 @interface DetailedViewController ()
 
-@property (nonatomic,weak) IBOutlet UILabel *nameDisplayLabel;
 @property (nonatomic,weak) IBOutlet UILabel *personNameLabel;
 
 @end
@@ -19,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _personNameLabel.text = _currentPersonDict[@"lastName"];
+    _personNameLabel.text = [_currentFlavor flavorName];
     // Do any additional setup after loading the view.
 }
 

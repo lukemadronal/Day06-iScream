@@ -76,8 +76,8 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     DetailedViewController *destController = [segue destinationViewController];
     NSIndexPath *indexPath = [_flavorsTableView indexPathForSelectedRow];
-    NSDictionary *currentPerson=_flavorsArray[indexPath.row];
-    destController.currentPersonDict = currentPerson;
+    Flavors *currentPerson=_flavorsArray[indexPath.row];
+    destController.currentFlavor = currentPerson;
 }
 
 #pragma mark - Life Cycle Methods

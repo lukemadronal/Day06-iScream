@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Flavors.h"
 
 @interface DetailedViewController : UIViewController
 
-@property (nonatomic, strong) NSDictionary *currentPersonDict;
+@property (nonatomic, strong)Flavors *currentFlavor;
 
 @end
