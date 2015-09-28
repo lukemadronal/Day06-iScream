@@ -11,12 +11,15 @@
 #import "AppDelegate.h"
 #import "Flavors.h"
 #import "InventoryItems.h"
+#import "DetailedViewController.h";
 
 @interface ViewController ()
 
 @property (nonatomic, strong) AppDelegate            *appDelegate;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSArray                *flavorsArray;
+@property (nonatomic,weak) IBOutlet UILabel *nameDisplayLabel;
+@property (nonatomic,weak) IBOutlet UITableView *flavorsTableView;
 
 @end
 
@@ -46,6 +49,35 @@
         totalInGallons = totalInGallons + [[inventoryItem sizeInGallons] floatValue];
     }
     return totalInGallons;
+}
+
+-(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _flavorsArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    Flavors *currentFlavor = _flavorsArray[indexPath.row];
+    cell.textLabel.text = [currentFlavor flavorName];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Gallons: %0.1f", [self totalInventoryForFlavor:currentFlavor]];
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",currentFlavor.flavorImage]];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DetailedViewController *destController = [segue destinationViewController];
+    NSIndexPath *indexPath = [_flavorsTableView indexPathForSelectedRow];
+    NSDictionary *currentPerson=_flavorsArray[indexPath.row];
+    destController.currentPersonDict = currentPerson;
 }
 
 #pragma mark - Life Cycle Methods

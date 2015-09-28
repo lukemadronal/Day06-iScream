@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01B64B451BB9B363005B8B8D /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B64B441BB9B363005B8B8D /* DetailedViewController.m */; settings = {ASSET_TAGS = (); }; };
 		1FADFB091B25148D001CA00E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FADFB081B25148D001CA00E /* main.m */; };
 		1FADFB0C1B25148D001CA00E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FADFB0B1B25148D001CA00E /* AppDelegate.m */; };
 		1FADFB121B25148D001CA00E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FADFB111B25148D001CA00E /* ViewController.m */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01B64B431BB9B363005B8B8D /* DetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedViewController.h; sourceTree = "<group>"; };
+		01B64B441BB9B363005B8B8D /* DetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedViewController.m; sourceTree = "<group>"; };
 		1FADFB031B25148D001CA00E /* iScream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iScream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FADFB071B25148D001CA00E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FADFB081B25148D001CA00E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 			children = (
 				1FADFB0A1B25148D001CA00E /* AppDelegate.h */,
 				1FADFB0B1B25148D001CA00E /* AppDelegate.m */,
+				01B64B431BB9B363005B8B8D /* DetailedViewController.h */,
+				01B64B441BB9B363005B8B8D /* DetailedViewController.m */,
 				1FADFB101B25148D001CA00E /* ViewController.h */,
 				1FADFB111B25148D001CA00E /* ViewController.m */,
 				1FADFB131B25148D001CA00E /* Main.storyboard */,
@@ -254,6 +259,7 @@
 			files = (
 				1FADFB0C1B25148D001CA00E /* AppDelegate.m in Sources */,
 				1FADFB431B25157C001CA00E /* Flavors.m in Sources */,
+				01B64B451BB9B363005B8B8D /* DetailedViewController.m in Sources */,
 				1FADFB121B25148D001CA00E /* ViewController.m in Sources */,
 				1FADFB4E1B25157C001CA00E /* InventoryItems.m in Sources */,
 				1FADFB521B25157C001CA00E /* iScream.xcdatamodeld in Sources */,
